@@ -1,0 +1,32 @@
+{{#if _wipe._showNavigationAsGraphic}}
+    <div class="wipe-navigation-inner wipe-navigation-graphic clearfix">
+
+        {{#each _children.models}}  
+            {{#with attributes._wipe}}
+                <a href="#" class="wipe-navigation-item {{_classes}}" wipe-index="{{@index}}" >             
+
+                    {{#if graphic}}
+                        <img class="wipe-navigation-item-img notselected" src="{{graphic.src}}" alt="{{graphic.alt}}" title="{{graphic.title}}"/>
+                        <img class="wipe-navigation-item-img selected" src="{{graphic.src-selected}}" alt="{{graphic.alt}}" title="{{graphic.title}}" />                                         
+                    {{/if}}
+                    {{#if tool-tip}}
+                        <div class="wipe-navigation-item-tooltip" >
+                            <div class="wipe-navigation-item-tooltip-inner" >
+                                {{tool-tip.title}}
+                            </div>
+                        </div>                                        
+                    {{/if}}                                    
+
+                </a>  
+            {{/with}}     
+        {{/each}}
+    </div>
+{{else}}
+    <div class="wipe-navigation-inner wipe-navigation-css clearfix">
+        {{#each _children.models}}        
+            <a href="#" class="wipe-navigation-item {{attributes._wipe._classes}}" wipe-index="{{@index}}" > </a>    
+        {{/each}}
+    </div>
+{{/if}}
+
+

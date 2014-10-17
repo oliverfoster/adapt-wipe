@@ -1,0 +1,17 @@
+{
+  "name": "adapt-wipe",
+  "version": "0.0.1",
+  "homepage": "",
+  "authors": [
+      "Salamat Ali <salamatmoali@gmail.com>",
+      "Stuart O'Hare <develop@stuartohare.com>",
+      "Thomas Taylor <thomas.taylor@kineo.com>"
+  ],
+  "description": "",
+  "main": "/js/adapt-wipe.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPLv3"
+}
