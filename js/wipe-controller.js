@@ -119,7 +119,7 @@ define(function(require) {
             var componentModel = Adapt.components.findWhere({_id:componentId});
             var articleModel = componentModel.findAncestor("articles");
             var $article = $(".article." + articleModel.get("_id"));
-            var newArticleIndex = $article.index()-1;
+            var newArticleIndex = _.indexOf($(".article").get(),$article[0]);;
 
             if(this.currentIndex === newArticleIndex){
                 this.animateToComponent(componentSelector);
